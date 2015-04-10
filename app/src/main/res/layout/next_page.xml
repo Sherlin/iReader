@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="sg.edu.nus.micphone2.AboutActivity"
+
+    android:id="@+id/action_about">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="71dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="15sp"
+        android:text="Once there was a miller who was poor, but who had a beautiful daughter. Now it happened that he had to go and speak to the king, and in order to make himself appear important he said to him, &quot; I have a daughter who can spin straw into gold. &quot;\n\n
+
+     The king said to the miller, &quot;That is an art which pleases me well, if your daughter is as clever as you say, bring her to-morrow to my palace, and I will put her to the test.&quot;\n\n
+
+    And when the girl was brought to him he took her into a room which was quite full of straw, gave her a spinning-wheel and a reel, and said, &quot; Now set to work, and if by to-morrow morning early you have not spun this straw into gold during the night, you must die.&quot;\n\n
+
+    Thereupon he himself locked up the room, and left her in it alone. So there sat the poor miller's daughter, and for the life of her could not tell what to do, she had no idea how straw could be spun into gold, and she grew more and more frightened, until at last she began to weep.\n"
+
+        android:id="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout >
