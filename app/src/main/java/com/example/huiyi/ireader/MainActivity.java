@@ -33,7 +33,7 @@ public class MainActivity extends ActionBarActivity {
 
                 String story = ((TextView) view.findViewById(R.id.list_item)).getText().toString();
                 if(story == "The Lonely Serpent") {
-                    Intent intent = new Intent(MainActivity.this, Nextpage.class);
+                    Intent intent = new Intent(MainActivity.this, Page1.class);
                     startActivity(intent);
                 }else{
                     Toast.makeText(getApplicationContext(), "Story In Progress", Toast.LENGTH_SHORT).show();
@@ -71,7 +71,7 @@ public class MainActivity extends ActionBarActivity {
 
 
     public void openAbout() {
-        Intent intent = new Intent(this, Nextpage.class);
+        Intent intent = new Intent(this, Page1.class);
         startActivity(intent);
     }
 

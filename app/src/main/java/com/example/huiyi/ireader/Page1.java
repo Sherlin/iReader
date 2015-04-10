@@ -1,5 +1,9 @@
 package com.example.huiyi.ireader;
 
+/**
+ * Created by huiyi on 29/3/15.
+ */
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -7,19 +11,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-/**
- * Created by huiyi on 8/4/15.
- */
-public class Page2  extends ActionBarActivity {
 
-    private MusicHandler musicHandler1;
+
+public class Page1 extends ActionBarActivity {
+
+
+    public static MusicHandler musicHandler;
+    public static MusicHandler musicHandler1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.page2);
-        Bundle b = this.getIntent().getExtras();
-        if(b!=null)
-            musicHandler1 = b.getParcelable("MUSICHANDLER");
+        setContentView(R.layout.page1);
+        musicHandler = new MusicHandler(this);
+        musicHandler1 = new MusicHandler(this);
+        musicHandler.load(R.raw.fatigue, false);
+        musicHandler1.load(R.raw.prayer, false);
+        musicHandler.fadeIn(5000);
+
     }
 
 
@@ -45,15 +54,33 @@ public class Page2  extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void backPage(View view)
-    {
-        Intent intent = new Intent(this, Page1.class);
-        startActivity(intent);
-    }
     public void nextPage(View view)
     {
+
+        musicHandler1.fadeIn(10000);
+        musicHandler.fadeOut(5000);
+        //Bundle b = new Bundle();
+        //b.putParcelable("MUSICHANDLER", musicHandler2);
+        Intent intent = new Intent();
+        //intent.putExtras(b);
+        intent.setClass(this,Page2.class);
+        startActivity(intent);
+    }
+    public void fadeOut(View view)
+    {
+        musicHandler.load(R.raw.prayer, false);
+        musicHandler.fadeOut(5000);
+    }
+
+    public void home(View view)
+    {
+
+        musicHandler.fadeOut(5000);
         musicHandler1.fadeOut(5000);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+
+
 }
