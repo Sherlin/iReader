@@ -41,7 +41,8 @@ public class About extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.home_page) {
+
+        if ( id == android.R.id.home) {
             openHome();
             return true;
         }
