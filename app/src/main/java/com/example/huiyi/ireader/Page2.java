@@ -13,7 +13,7 @@ import android.widget.Toast;
  */
 public class Page2  extends ActionBarActivity {
 
-    private MusicHandler musicHandler1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +55,7 @@ public class Page2  extends ActionBarActivity {
     }
     public void nextPage(View view)
     {
-        musicHandler1.fadeOut(5000);
+
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
@@ -63,5 +63,10 @@ public class Page2  extends ActionBarActivity {
     public void openAbout() {
         Intent intent = new Intent(this, About.class);
         startActivity(intent);
+    }
+
+    public void mute() {
+
+
     }
 }

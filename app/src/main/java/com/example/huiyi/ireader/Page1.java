@@ -92,6 +92,11 @@ public class Page1 extends ActionBarActivity {
         startActivity(intent);
     }
 
+    public void mute() {
+
+
+    }
+
     @Override
     public void onPause()
     {
