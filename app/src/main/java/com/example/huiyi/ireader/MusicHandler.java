@@ -222,4 +222,15 @@ public class MusicHandler implements Parcelable
 
 
     }
+
+    public int getCurrentPosition()
+    {
+        return mediaPlayer.getCurrentPosition();
+    }
+
+    public void seekTo(int seek)
+    {
+        mediaPlayer.seekTo(seek);
+    }
+
 }
