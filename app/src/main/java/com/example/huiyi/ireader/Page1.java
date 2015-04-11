@@ -28,7 +28,6 @@ public class Page1 extends ActionBarActivity {
         musicHandler.load(R.raw.fatigue, false);
         musicHandler1.load(R.raw.prayer, false);
         musicHandler.fadeIn(5000);
-
     }
 
 
@@ -91,6 +90,11 @@ public class Page1 extends ActionBarActivity {
         startActivity(intent);
     }
 
-
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+        musicHandler.pause(1000);
+    }
 
 }
