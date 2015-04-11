@@ -72,6 +72,7 @@ public class Page1 extends ActionBarActivity {
         musicHandler.fadeOut(5000);
     }
 
+
     public void home(View view)
     {
 
