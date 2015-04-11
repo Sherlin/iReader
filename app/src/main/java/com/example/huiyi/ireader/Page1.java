@@ -18,6 +18,7 @@ public class Page1 extends ActionBarActivity {
 
     public static MusicHandler musicHandler;
     public static MusicHandler musicHandler1;
+    public static int seek = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,8 @@ public class Page1 extends ActionBarActivity {
         setContentView(R.layout.page1);
         musicHandler = new MusicHandler(this);
         musicHandler1 = new MusicHandler(this);
-        musicHandler.load(R.raw.fatigue, false);
+        //musicHandler.load(R.raw.fatigue, false);
+        musicHandler.load(R.raw.love_song, false);
         musicHandler1.load(R.raw.prayer, false);
         musicHandler.fadeIn(5000);
     }
@@ -94,7 +96,15 @@ public class Page1 extends ActionBarActivity {
     public void onPause()
     {
         super.onPause();
+        seek = musicHandler.getCurrentPosition();
         musicHandler.pause(1000);
     }
 
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        musicHandler.seekTo(seek);
+        musicHandler.fadeIn(1000);
+    }
 }
