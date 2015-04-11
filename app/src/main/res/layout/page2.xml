@@ -39,7 +39,7 @@
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:text="Back Page"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 android:textColor="#000000"
                 android:layout_weight=".5"
                 android:onClick="backPage"/>
@@ -48,7 +48,7 @@
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:text="Home"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 android:textColor="#000000"
                 android:layout_weight=".5"
                 android:onClick="nextPage"/>

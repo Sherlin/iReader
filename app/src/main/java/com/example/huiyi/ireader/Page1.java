@@ -10,7 +10,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
+import android.widget.Toast;
 
 
 public class Page1 extends ActionBarActivity {
@@ -47,8 +47,12 @@ public class Page1 extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_page) {
+        if (id == R.id.about_page) {
+            openAbout();
             return true;
+        }else if(id == R.id.setting_page){
+
+            Toast.makeText(getApplicationContext(), "Under construction", Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);
@@ -78,6 +82,11 @@ public class Page1 extends ActionBarActivity {
         musicHandler.fadeOut(5000);
         musicHandler1.fadeOut(5000);
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void openAbout() {
+        Intent intent = new Intent(this, About.class);
         startActivity(intent);
     }
 

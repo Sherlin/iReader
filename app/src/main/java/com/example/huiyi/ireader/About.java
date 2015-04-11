@@ -5,20 +5,24 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
+import android.widget.TextView;
 
 /**
- * Created by huiyi on 8/4/15.
+ * Created by huiyi on 11/4/15.
  */
-public class Page2  extends ActionBarActivity {
+public class About extends ActionBarActivity {
 
-    private MusicHandler musicHandler1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.page2);
+        String message = "Author: StormFalcon & Doctress <3";
 
+        TextView textview = new TextView(this);
+        textview.setTextSize(30);
+        textview.setText(message);
+        setContentView(textview);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 
@@ -37,31 +41,16 @@ public class Page2  extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.about_page) {
-            openAbout();
+        if (id == R.id.home_page) {
+            openHome();
             return true;
-        }else if(id == R.id.setting_page){
-
-            Toast.makeText(getApplicationContext(), "Under construction", Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    public void backPage(View view)
-    {
-        Intent intent = new Intent(this, Page1.class);
-        startActivity(intent);
-    }
-    public void nextPage(View view)
-    {
-        musicHandler1.fadeOut(5000);
+    public void openHome() {
         Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void openAbout() {
-        Intent intent = new Intent(this, About.class);
         startActivity(intent);
     }
 }

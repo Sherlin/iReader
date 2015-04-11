@@ -61,9 +61,12 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_page) {
+        if (id == R.id.about_page) {
             openAbout();
             return true;
+        }else if(id == R.id.setting_page){
+
+            Toast.makeText(getApplicationContext(), "Under construction", Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);
@@ -71,7 +74,7 @@ public class MainActivity extends ActionBarActivity {
 
 
     public void openAbout() {
-        Intent intent = new Intent(this, Page1.class);
+        Intent intent = new Intent(this, About.class);
         startActivity(intent);
     }
 
