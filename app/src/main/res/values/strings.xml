@@ -16,14 +16,27 @@
         <![CDATA[
 
 
-                As the tides receded, the villagers emerged from their fallen homes, eyes sweeping over the destruction,
+                 \tAs the tides receded, the villagers emerged from their fallen homes, eyes sweeping over the destruction,
                 minds comprehending, but rejecting what it meant. Splintered wood and battered furniture floated amidst
                 the few fortuitous structures that weathered the storm – they are all that is left of the once beautiful
                  floating city, Kaliku.
 
-                 Cries of sorrow, like raindrops falling on a silent lake, shattered the crimson sunset, as the weight of
+                 \tCries of sorrow, like raindrops falling on a silent lake, shattered the crimson sunset, as the weight of
                  loss finally overcame the survivors. The tidal wave had taken everything. Once glimmering eyes, full of
                  joy and hope, are now shot with blood, pain and tears.
+
+
+                \tGently, the travelling priestess came forward, and told the survivors to gather the fallen. Despite her
+                strength, her training, despite her magic, she failed to stop the tidal wave, failed to stop the cause
+                of it. The powerlessness, guilt, and remorse burned in her like scalding acid. She could not save them,
+                but she would do all she could to send them on their way to the afterlife.
+
+                \tAnd so, once the bodies were gathered, she danced, danced like she never had, like only she knew how. The
+                 Dance of Passing. Staff in hand, she swayed in the failing sunlight, left and right, back and forth,
+                 summoning that hidden strength so few were gifted with. Her shadow faltered as she jumped and swirled, as
+                  the sun finally fell over the horizon…
+
+
 
 
         ]]>
@@ -33,20 +46,22 @@
     <string name="intro_message1">
         <![CDATA[
 
-                Gently, the travelling priestess came forward, and told the survivors to gather the fallen. Despite her
+                \t\tGently, the travelling priestess came forward, and told the survivors to gather the fallen. Despite her
                 strength, her training, despite her magic, she failed to stop the tidal wave, failed to stop the cause
                 of it. The powerlessness, guilt, and remorse burned in her like scalding acid. She could not save them,
-                but she would do all she could to send them on their way to the afterlife.
+                but she would do all she could to send them on their way to the afterlife.\n
 
-                And so, once the bodies were gathered, she danced, danced like she never had, like only she knew how. The
+                \t\tAnd so, once the bodies were gathered, she danced, danced like she never had, like only she knew how. The
                  Dance of Passing. Staff in hand, she swayed in the failing sunlight, left and right, back and forth,
                  summoning that hidden strength so few were gifted with. Her shadow faltered as she jumped and swirled, as
-                  the sun finally fell over the horizon…
+                  the sun finally fell over the horizon…\n
 
-                And so, once the bodies were gathered, she danced, danced like she never had, like only she knew how. The
-                Dance of Passing. Staff in hand, she swayed in the failing sunlight, left and right, back and forth,
-                summoning that hidden strength so few were gifted with. Her shadow faltered as she jumped and swirled,
-                as the sun finally fell over the horizon…
+                  \t\tBut was then slowly re-established by small orbs of light materialising from the bodies of the dead – Pyres,
+                   the souls of the fallen. And they danced with her, each glowing brighter and brighter with each gesture,
+                  purified by her magic. And finally, as the priestess completed her tribute, slowly to a gentle bow, the lights
+                   softened to a warm glow, and vanished into the darkness of the night.
+
+
 
         ]]>
     </string>

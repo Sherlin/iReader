@@ -17,9 +17,7 @@ public class Page2  extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.page2);
-        Bundle b = this.getIntent().getExtras();
-        if(b!=null)
-            musicHandler1 = b.getParcelable("MUSICHANDLER");
+
     }
 
 
