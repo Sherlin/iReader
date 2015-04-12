@@ -10,6 +10,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 
@@ -29,6 +30,16 @@ public class Page1 extends ActionBarActivity {
         musicHandler.load(R.raw.love_song, false);
 
         musicHandler.fadeIn(5000);
+
+        final Button muteButton = (Button) findViewById(R.id.Mutebutton);
+        muteButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick (View v)
+            {
+                mute();
+            }
+        });
+
     }
 
 
@@ -91,12 +102,6 @@ public class Page1 extends ActionBarActivity {
         startActivity(intent);
     }
 
-    public void mute() {
-        seek = musicHandler.getCurrentPosition();
-        musicHandler.pause(1000);
-
-    }
-
     @Override
     public void onPause()
     {
@@ -111,5 +116,12 @@ public class Page1 extends ActionBarActivity {
         super.onResume();
         musicHandler.seekTo(seek);
         musicHandler.fadeIn(1000);
+    }
+
+    /** WORK IN PROGRESS **/
+    public void mute() {
+        seek = musicHandler.getCurrentPosition();
+        musicHandler.pause(1000);
+
     }
 }
