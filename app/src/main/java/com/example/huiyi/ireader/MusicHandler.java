@@ -233,4 +233,9 @@ public class MusicHandler implements Parcelable
         mediaPlayer.seekTo(seek);
     }
 
+    public Boolean isPlaying()
+    {
+        return mediaPlayer.isPlaying();
+    }
+
 }

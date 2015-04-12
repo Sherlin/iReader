@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.net.MulticastSocket;
+
 
 public class Page1 extends ActionBarActivity {
 
@@ -36,7 +38,15 @@ public class Page1 extends ActionBarActivity {
         {
             public void onClick (View v)
             {
-                mute();
+                if(musicHandler.isPlaying())
+                {
+                    mute();
+                }
+                else
+                {
+                    musicHandler.seekTo(seek);
+                    musicHandler.fadeIn(1000);
+                }
             }
         });
 
