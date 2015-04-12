@@ -28,8 +28,8 @@ public class Page1 extends ActionBarActivity {
         setContentView(R.layout.page1);
         musicHandler = new MusicHandler(this);
 
-        //musicHandler.load(R.raw.fatigue, false);
-        musicHandler.load(R.raw.love_song, false);
+        musicHandler.load(R.raw.fatigue, false);
+        //musicHandler.load(R.raw.love_song, false);
 
         musicHandler.fadeIn(5000);
 
