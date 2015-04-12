@@ -128,7 +128,6 @@ public class Page1 extends ActionBarActivity {
         musicHandler.fadeIn(1000);
     }
 
-    /** WORK IN PROGRESS **/
     public void mute() {
         seek = musicHandler.getCurrentPosition();
         musicHandler.pause(1000);
