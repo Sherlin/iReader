@@ -13,12 +13,15 @@ import android.widget.Toast;
  */
 public class Page2  extends ActionBarActivity {
 
-
+    public static MusicHandler musicHandler1;
+    public static int seek = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.page2);
-
+        musicHandler1 = new MusicHandler(this);
+        musicHandler1.load(R.raw.prayer, false);
+        musicHandler1.fadeIn(5000);
     }
 
 
@@ -50,12 +53,13 @@ public class Page2  extends ActionBarActivity {
 
     public void backPage(View view)
     {
+        musicHandler1.fadeOut(5000);
         Intent intent = new Intent(this, Page1.class);
         startActivity(intent);
     }
     public void nextPage(View view)
     {
-
+        musicHandler1.fadeOut(5000);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
@@ -66,7 +70,22 @@ public class Page2  extends ActionBarActivity {
     }
 
     public void mute() {
+        seek = musicHandler1.getCurrentPosition();
+        musicHandler1.pause(1000);
 
+    }
+    public void onPause()
+    {
+        super.onPause();
+        seek = musicHandler1.getCurrentPosition();
+        musicHandler1.pause(1000);
+    }
 
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        musicHandler1.seekTo(seek);
+        musicHandler1.fadeIn(1000);
     }
 }

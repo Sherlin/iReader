@@ -17,7 +17,6 @@ public class Page1 extends ActionBarActivity {
 
 
     public static MusicHandler musicHandler;
-    public static MusicHandler musicHandler1;
     public static int seek = 0;
 
     @Override
@@ -25,10 +24,10 @@ public class Page1 extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.page1);
         musicHandler = new MusicHandler(this);
-        musicHandler1 = new MusicHandler(this);
+
         //musicHandler.load(R.raw.fatigue, false);
         musicHandler.load(R.raw.love_song, false);
-        musicHandler1.load(R.raw.prayer, false);
+
         musicHandler.fadeIn(5000);
     }
 
@@ -62,7 +61,7 @@ public class Page1 extends ActionBarActivity {
     public void nextPage(View view)
     {
 
-        musicHandler1.fadeIn(10000);
+
         musicHandler.fadeOut(5000);
         //Bundle b = new Bundle();
         //b.putParcelable("MUSICHANDLER", musicHandler2);
@@ -82,7 +81,7 @@ public class Page1 extends ActionBarActivity {
     {
 
         musicHandler.fadeOut(5000);
-        musicHandler1.fadeOut(5000);
+
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
@@ -93,7 +92,8 @@ public class Page1 extends ActionBarActivity {
     }
 
     public void mute() {
-
+        seek = musicHandler.getCurrentPosition();
+        musicHandler.pause(1000);
 
     }
 
